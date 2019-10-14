@@ -1,0 +1,122 @@
+\chapter{Wykład 12.10.2019}
+\label{ch:wyklad1}
+
+\section{Złożoność obliczeniowa}
+
+Zagadnienia złożoności obliczeniowej
+- jakie sa koszty prowadzenia obliczeń czasowe i pamięciowe:
+\begin{itemize}
+  \item Złożoność wykładnicza
+  \item Nierozsądne gospodarowanie czasem
+  \item Nierozsądne gospodarowanie pamięciową \ldots
+\end{itemize}
+
+
+\section{Gramatyka}
+
+\newtheorem*{theorem*}{Gramatyka}
+\begin{theorem*} Jak poprawnie budować wyrażenia danego języka (zbiór zasad).
+Gramatyka inaczej jest nazywana syntaktyką albo składnią. \end{theorem*}
+
+
+
+%schemat gramatyki
+\begin{tikzpicture}
+
+\node[draw, rectangle, minimum width = 3 cm, minimum height = 2 cm] (fl) at (0,0) { \bf JĘZYK};
+
+
+% oznaczenie nad dgłównym prostokatem 
+%\node[above] at (fl.north) {$V(B)$};
+
+\draw[<-] (fl) -- node[above]{ \bf gramatyka} node[below]{generowanie wyrażeń} ++(-6,0);
+\draw[<-] (fl) -- node[above]{\bf automat} node[below]{rozpoznawanie wyrażeń tego języka} ++(8,0);
+\end{tikzpicture}
+
+
+Między innymi kompilator posiada w sobie element rozpoznający gramatykę. \newline
+
+
+%%%%%%%%%%%%%%%%%%%%%% Symbol %%%%%%%%%%%%%%%%%%%%
+
+
+\section{Symbol a znaczenie symbolu}
+
+ \subsection{Abstrakcyjne pojęcie liczby}
+
+
+Warto odróżnić symbol od jego znaczenia. Np. liczbę dwa można zapisywac w postaci symoblu cyfry arabskiej { \bf 2} lub rzymskiej  { \bf II}. To samo dotyczy słowa { \bf słoń } - słowo oznacza wielkie kilkutonowe zwierze ale nim nie jest (nie jest bytem materialnym). 
+
+\newtheorem*{theorem2*}{Abstrahować}
+\begin{theorem2*} Abstrachować znacyz pomijać. Np.: abstrakcyjna liczba dwa powstała z pominięciem takich cech jak wielkość, pochodzenie.
+ \end{theorem2*}
+ 
+\subsection{Przykład powstania liczby}
+Różna materialne nośniki niosące te same liczby obiektów o różnych cechach.Opisanie wspólnej cechy obiektów - { \bf liczebności} .
+
+ 
+\begin{enumerate}[label=(\roman*)]
+  \item {\bf couple} of people (para ludzi - 2)
+  \item {\bf pair} of pistols (para pistoletów - 2)
+  \item {\bf yoke} of oxen (zaprzęg dwa zwięrzęta)
+\end{enumerate}
+ 
+ 
+
+Abstakcyjna liczba { \bf 2} powstała abstrahując od pochodzenia (np. zwierzęcia), wielkości (np. broni) czy płci (para ludzi) pozostawiając tylko jedną wspólną cechę, którą jest { \bf liczebność} . 
+ 
+
+%%%%%%%%%%%%%%%%%%%%%% języki formalne %%%%%%%%%%%%%%%%%%%%
+
+\section{Języki formalne}
+\subsection{Pojęcia}
+
+Ciągi i zbiory ciągów traktowane są jako obiekty materialne a { \bf nie } abstrakycjne. \newline
+{ \bf Skończoność} - ważna cecha alfabetu/zbioru ponieważ tylko skończone zbiory danych można przechowywać w { \bf fizycznym urządzeniu}. 
+
+\newtheorem*{theorem3*}{Alfabet V}
+\begin{theorem3*} Alfabet V to: { \bf dowolny} , { \bf niepusty} , { \bf skończony zbior znaków}  \newline np.: V = \{I\} , V' = \{a,b\}.
+\newline
+
+
+ \end{theorem3*}
+
+
+\newtheorem*{theorem4*}{Słowo nad alfabetem V}
+\begin{theorem4*} Słowo nad alfabetem V to dowolny, skończony ciąg znkaów z V. np.: {\bf IIII} (słowo nad alfabete V=\{I\}) czy {\bf abba} (słowo nad alfabetem V=\{a,b\}) 
+ \end{theorem4*}
+
+
+\newtheorem*{theorem5*}{Słowo puste $\epsilon$}
+\begin{theorem5*}Słowo puste $\epsilon$ - słowo o 0 (zerowym) wystąpieniu symboli. Uwaga! Spacja {\bf NIE} jest słowem pustym.
+ \end{theorem5*}
+ 
+ 
+ \newtheorem*{theorem6*}{V*}
+\begin{theorem6*}Zbiór wszsytkich słów nad alfabetem V. Łącznie z pustym słowem $\epsilon$.
+ \end{theorem6*}
+ 
+ 
+\newtheorem*{theorem7*}{V* \textbackslash \{$\epsilon$\} = V+}
+\begin{theorem7*}
+Zbiór wszsytkich niepustych słów. (ŁWyłączenie ze zbioru pustego słowa $\epsilon$)
+ \end{theorem7*}
+ 
+\newtheorem*{theorem8*}{Oznaczenie słów}
+\begin{theorem8*}
+Słowa oznaczane są wielkimi literami z końca alfabetu łacińskiego, np.: { \bf P},{\bf Q},{\bf R}. 
+ \end{theorem8*}
+ 
+
+\subsection{Operacja konkatenacji}
+\subsubsection{Własności konkatenacji}
+\begin{itemize}
+  \item Konkatenacja jest działaniem łacznym w zbiorze słów
+  \item Konkatenacja w ogólnoście {\bf NIE} jest przemienna (bywa przemienna dla tyh samych słów {\bf ab} {\bf ab } ) lub jeśli alfabet skada sie tylko z jednego znaku np V = \{a\}
+  \item $\epsilon$ słowo puste zachowje się jak element neutralny dla operacji konkatenacji: \newline $\epsilon$P $\subset$ 
+  P$\epsilon$ = P.
+\end{itemize}
+
+
+\subsection{Konkatnacja a grupa algebraiczna}
+
