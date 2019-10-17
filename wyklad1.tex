@@ -216,6 +216,82 @@ Długością słowa $P \subset V^{*}$ nazywamy liczbę naturalną $\mid P\mid$ d
 \end{theorem13*}
 
 
+\paragraph{Przykład 1.}
+Długość słowa {\bf abc} \newline
+$\mid abc \mid = \mid ab \mid + 1 = ( \mid a \mid + 1) + 1 = 
+(\mid \epsilon a \mid + 1) + 1 =   ((\mid \epsilon \mid + 1 )+1)+1 =
+((0+1)+1)+1 = 3
+$ 
+
+\paragraph{Przykład 2.}
+Obliczyć ilość wszystkich podsłów słowa {\bf P} gdy dana jest długość słowa $\mid P \mid = 4$ \newline
+Odp: { \bf NIE WIĘCEJ NIŻ} 11. \newline
+Rozwiązanie a):\newline
+Weźmy dla przykładu słowo {\bf abcd }. 
+
+Podsłowo {\bf abcd} $\subset$ {\bf abcd} - jedno podsłowo długości 4. (Słowo jest samo swoim podsłowem; kolejnosć znaków też ma znaczenie np słowo {\bf bcda} $\not\subset $ {\bf abcd}  ).
+\newline
+
+Podsłowa długości 3 (2 takie słowa)
+{\bf abc} $\subset$ {\bf abcd},
+{\bf bcd} $\subset$ {\bf abcd};
+
+Podsłowa długości 3 (2 takie słowa)
+{\bf ab} $\subset$ {\bf abcd},
+{\bf bc} $\subset$ {\bf abcd},
+{\bf cd} $\subset$ {\bf abcd};
+
+Podsłowa długości 1 (4 takie słowa)
+{\bf a} $\subset$ {\bf abcd},
+{\bf b} $\subset$ {\bf abcd},
+{\bf c} $\subset$ {\bf abcd},
+{\bf d} $\subset$ {\bf abcd};
+
+Odp a) Dla słowa { \bf abcd} mamy (1+2+3+4) + 1( dodajemy jeden bo znak pusty $\epsilon$ )
+
+Rozwiązanie b):
+Załóżmy, że szukamy wszystkich podsłów słowa P = {\bf aaaa}. 
+aaaa $\subset$  aaaa (1 podsłowo)
+aaa $\subset$  aaaa (1 podsłowo)
+aa $\subset$  aaaa (1 podsłowo)
+a $\subset$  aaaa (1 podsłowo)
+
+Odp a) Dla słowa { \bf aaaa} mamy (1+1+1+1) + 1( dodajemy jeden bo znak pusty $\epsilon$ ), ponieważ {\bf NIE ROZRÓŻNIAMY ZNAKÓW MIĘDZY SOBĄ tzn.: zawsze a == a} (nie rozróżniamy permutacji tych samych elementów)
+
+
+\paragraph{Zadanie Domowe na ćwiczenia}
+Napisać procedurę w pseudokodzie:
+Dla zadanego słowa długośc {\bf n} napisac procedurę, które pokaże liczbę {\bf k} podsłów oraz wypisze całą listę konkretnych podsłów.
+
+\subsection{Długość konktatenacji słów}
+
+\newtheorem*{theorem14*}{Długość konktatenacji słów}
+\begin{theorem14*}
+\begin{center}
+$\mid PQ \mid = \mid P \mid + \mid Q \mid$
+\end{center}
+
+Dowód (indukcja matematyczna):\newline
+$\forall P,Q: \mid PQ \mid = \mid P \mid + \mid Q \mid$ (Indukcja po długości $\mid Q \mid$)
+
+\begin{enumerate}[label=(\roman*)]
+\item $\mid Q \mid = \epsilon$ \newline
+LewaStrona: $\mid PQ \mid = \mid P \epsilon \mid = \mid P \mid$ \newline
+PrawaStrona: $\mid P \mid + \mid Q \mid = \mid P \mid + \mid \epsilon \mid = \mid P \mid+ 0 = \mid P \mid $ = { \bf LewaStrona} 
+\newline c.n.d (co należało dowieść)
+  
+  
+\item $\mid PQ \mid = \mid P \mid + \mid Q \mid $ \newline
+PrawaStrona: $\mid P(Qa) \mid = \mid P \epsilon \mid = \mid P \mid$ \newline
+
+LewaStrona: $\mid P \mid + \mid Q \mid = \mid P \mid + \mid \epsilon \mid = \mid P \mid+ 0 = \mid P \mid $ = { \bf LewaStrona} \newline c.n.d (co należało dowieść)
+  
+\end{enumerate} 
+\end{theorem14*}
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
