@@ -109,6 +109,23 @@ Słowa oznaczane są wielkimi literami z końca alfabetu łacińskiego, np.: { \
  
 
 \subsection{Operacja konkatenacji}
+
+\newtheorem*{theorema*}{Konkatenacja dwóch słów}
+\begin{theorema*}
+Konkatenacją dwóch słów {\bf P} i {\bf Q} nazywamy słowo {\bf PQ} zdefiniowane w następujący sposób:
+
+\begin{enumerate}[label=(\roman*)]
+  \item jeżeli {\bf P}=$a_{1}, ... ,a_{n}$ gdzie {\bf a}=$b_{1}, ... ,b_{n}$ n,m $\ge$ 0 to {\bf PQ}= $a_{1},...,a_{n}b_{1},...,b_{n}$
+  \item Jeżeli {\bf P}=$\epsilon$, to {\bf PQ}=Q.\newline 
+  Alternatywnie to {\bf Q}=$\epsilon$ i wtedy {\bf PQ}=P. \newline
+  Gdy {\bf P}={\bf Q}=$\epsilon$ to {\bf PQ=}$\epsilon\epsilon$ = $\epsilon$ . 
+\end{enumerate} 
+
+ 
+ \end{theorema*}
+
+
+
 \subsubsection{Własności konkatenacji}
 \begin{itemize}
   \item Konkatenacja jest działaniem łacznym w zbiorze słów
@@ -118,5 +135,129 @@ Słowa oznaczane są wielkimi literami z końca alfabetu łacińskiego, np.: { \
 \end{itemize}
 
 
-\subsection{Konkatnacja a grupa algebraiczna}
+\subsection{Konkatenacja NIE jest grupą algebraiczną  $\heartsuit$}
+Pomimo abstrakcyjnego znaczenia liczb, ich mentalna reprezentacja jest jednak w urządzeniu czymś materialnym (stanami wysokich i niskich napięć).
 
+ $V^{*}$ - zbiór wszystkich elementow (słów) nad alfabatem { \bf V} (łącznie z elementem pustym $\epsilon$)
+
+$\circ$ - oznacza działanie w grupie 
+
+{\bf e} - litera e jest symbolem elementu neutralnego \newline
+
+Przykład łączności:
+a) dodawanie np. : 2 + (3 + 5) = (2 + 3) + 5
+b) mnożenie np.:  2 * (3 * 5) = (2 * 3) * 5
+ 
+Konkatenacja jest grupą (z algebry) jeśli spełnia warunki na bycie grupą:
+
+
+\begin{enumerate}[label=(\roman*)]
+  \item operacja $\circ$ jest łączna w grupie;
+  \item $\exists e$, $\forall x $ Istnieje element neutralny dal każdego x, taki że  $x \circ e = e \circ x = x$;
+  \item Dla każdego x $\forall x $   Istnieje element odwrotny  $\exists x^{-1}$, taki, że  $x \circ  x^{-1} = x^{-1} \circ x = e$. \newline Warunek nie spełniony przez konkatenację - nie istnieje w ogólności takie słowo gdzie: słowo + słowo$^{-1} = \epsilon$ 
+  (szczególny przypadek spełnienia to $\epsilon$ + $\epsilon$ = $\epsilon$, bo element neutralny jest sam do siebie odwrotny $\epsilon^{-1} = \epsilon$ ) \newline $\Rightarrow$ {\bf WARUNEK NIE JEST W OGÓLNOŚCI SPEŁNIONY - konkatenacja NIE jest grupą!}
+\end{enumerate}
+
+
+\subsection{Podsłowo słowa}
+Zbiór { \bf A } $\subset$   { \bf A } i analogicznie  { \bf abca } $\sqsubset$  { \bf abca }
+(Znak $\sqsubset$  to taka kanciasta inkluzja oznaczenie używane przy słowach)
+
+
+\newtheorem*{theorem9*}{Podsłowo}
+\begin{theorem9*}
+Mówimy, że słowo {\bf Q} jest podsłowem słowa {\bf P} wtedy i tylko wtedy gdy, istnieją słowa $Q_{1}$ i $Q_{2}$ takie, że:
+\begin{center}
+$P = Q_{1}${\bf Q}$Q_{2}$.
+\end{center}
+Np:. słowo {\bf bc} jest podsłowem słowa {\bf abcd} 
+
+
+\begin{center}
+\begin{tikzpicture}
+\node[left]{$Q_{1}$};
+\draw[->] (0,0)-- (1.9,0.8) node[right]{{\bf a}$\underbrace{bc}_{Q}${\bf d}};
+\draw[<-] (3,0.8) -- (5,0) node[right]{$Q_{2}$};
+\end{tikzpicture}
+\end{center}
+
+Widać, tutaj, zę Q to słowo {\bf ab}, $Q_{1} = a$, $Q_{2}=d$
+\end{theorem9*}
+ 
+
+\newtheorem*{theorem10*}{Prefix słowa}
+\begin{theorem10*}
+Słowo $Q$ jest prefixem słowa $P$ jeśli $P = QQ_{1}$.
+\end{theorem10*}
+ 
+\newtheorem*{theorem11*}{Suffix słowa}
+\begin{theorem11*}
+Słowo $Q$ jest suffixem słowa $P$ jeśli $P =Q_{1}Q$.
+\end{theorem11*}
+
+\newtheorem*{theorem12*}{Infix słowa}
+\begin{theorem12*}
+Słowo $Q$ jest infixem słowa $P$ jeśli $P =Q_{1}QQ_{2}$  \newline
+gdzie $Q_{1}\neq \epsilon$ i gdzie $Q_{2} \neq \epsilon$.
+\end{theorem12*}
+
+
+
+\subsection{Długość słowa}
+\newtheorem*{theorem13*}{Długość słowa $\mid P\mid$}
+\begin{theorem13*}
+Długością słowa $P \subset V^{*}$ nazywamy liczbę naturalną $\mid P\mid$ definiujemy w sposób indukcyjny:
+ 
+\begin{enumerate}[label=(\roman*)]
+  \item $ \mid  \epsilon \mid=0$
+  \item $ \mid P{ \bf a}  \mid= \mid P \mid + 1$; gdzie P to ciąg (słowo) a {\bf a} to symbol (dodatkowa litera w słowie).
+\end{enumerate} 
+ 
+\end{theorem13*}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\chapter{Brudnopis}
+\label{ch:brudnopis}
+
+$$\heartsuit$$
+
+$\underbrace{wyr1}_{wyr2},\overbrace{wyr1}^{wyr2}$
+
+$\exists y\geq 0\;\forall x:x\leq y$
+
+ $\sqsupset$ 
+ 
+ 
+ \begin{tikzpicture}
+\draw[->] (0,0) node[left]{Q} -- (2,1) node[right]{abcd} -- (3,1)(5,0) node[right]{Q2};
+
+
+\end{tikzpicture}
+
+
+\xymatrix{
+    A \ar[d] \ar[dr] \ar[drr] &   &   \\
+    B                         & C & D }
+
+\xymatrix{A &*+[F]{\sum_{i=n}^m {i^2}} \\& {\bullet} & D \ar[ul]     }
+
+\xymatrix{A \ar[d]^b \ar[r]^a &B\ar[d]^c\\C \ar[r]^d          &D}
+
+
+
+\begin{picture}(300,20)
+\put(50,10){\vector(2,-3){20}}
+\put(50,10){\vector(2,-1){60}}
+\put(-10,15){these guys \textbf{here} must be eliminated. The next one \textbf{here} too, of course.}
+\put(230,10){\vector(-2,-3){20}}
+\end{picture}
+\[ \bigl\{ \underbracket[0.5pt]{x \in \mathbb{Z}}_{\clap{\footnotesize Menge aller $x$ aus $\mathbb{Z}$}} \stackrel{\Shortstack {\clap{\footnotesize mit der Eigenschaft}\\$\downarrow $}}{\mid} -1 \le x \le 2\bigr\} \]
+\\[1cm]
+And I want to get it like this:
+\[ \{x \in \mathbb{Z} \ | \ -1 \le x \le 2 \}, \]
+where the \verb|\overbrace| doesn't wait till the \verb|\underbrace| is going to have the work done.
