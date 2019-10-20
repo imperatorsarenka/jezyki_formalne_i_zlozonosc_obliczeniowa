@@ -1,0 +1,54 @@
+\newpage
+\chapter{Brudnopis}
+\label{ch:brudnopis}
+
+
+\begin{mytheo}{This is my title}{theoexample}
+  This is the text of the theorem. The counter is automatically assigned and,
+  in this example, prefixed with the section number. This theorem is numbered with
+  \ref{th:theoexample} and is given on page \pageref{th:theoexample}.
+\end{mytheo}
+
+
+
+$$\heartsuit$$
+$\varheart$
+
+$\underbrace{wyr1}_{wyr2},\overbrace{wyr1}^{wyr2}$
+
+$\exists y\geq 0\;\forall x:x\leq y$
+
+ $\sqsupset$ 
+ 
+ 
+ \begin{tikzpicture}
+\draw[->] (0,0) node[left]{Q} -- (2,1) node[right]{abcd} -- (3,1)(5,0) node[right]{Q2};
+
+
+\end{tikzpicture}
+
+
+\xymatrix{
+    A \ar[d] \ar[dr] \ar[drr] &   &   \\
+    B                         & C & D }
+
+\xymatrix{A &*+[F]{\sum_{i=n}^m {i^2}} \\& {\bullet} & D \ar[ul]     }
+
+\xymatrix{A \ar[d]^b \ar[r]^a &B\ar[d]^c\\C \ar[r]^d          &D}
+
+
+
+\begin{picture}(300,20)
+\put(50,10){\vector(2,-3){20}}
+\put(50,10){\vector(2,-1){60}}
+\put(-10,15){these guys \textbf{here} must be eliminated. The next one \textbf{here} too, of course.}
+\put(230,10){\vector(-2,-3){20}}
+\end{picture}
+\[ \bigl\{ \underbracket[0.5pt]{x \in \mathbb{Z}}_{\clap{\footnotesize Menge aller $x$ aus $\mathbb{Z}$}} \stackrel{\Shortstack {\clap{\footnotesize mit der Eigenschaft}\\$\downarrow $}}{\mid} -1 \le x \le 2\bigr\} \]
+\\[1cm]
+And I want to get it like this:
+\[ \{x \in \mathbb{Z} \ | \ -1 \le x \le 2 \}, \]
+where the \verb|\overbrace| doesn't wait till the \verb|\underbrace| is going to have the work done.
+
+
+
